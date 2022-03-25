@@ -1,24 +1,55 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './Sb.css';
+import Sidebar from './Sidebar';
+import Topbar from './Topbar';
+import { useState } from 'react';
+import Dashboard from './Dashboard';
+import Addcar from './Addcar';
+import Viewcar from './Viewcar';
+import Confirmationform from './Confirmationform';
+import Myorder from './Myorder';
+import Payment from './Payment';
+import Edit from './Edit';
+import Login from './Login';
+import Register from './Register';
+import Orderpayment from './Orderpayment';
+import Bookingconfirmed from './Bookingconfirmed';
+  
+ 
+ 
 function App() {
-  return (
+  const [bill,setbill]=useState(null)
+  const [useremail,setuseremail]=useState(null)
+   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <div id="wrapper">
+          <Sidebar useremail={useremail}/> 
+          <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+              <Topbar/>
+              <div class="container-fluid">
+                <Routes>
+                <Route path="/" element={<Dashboard/>}></Route>
+                <Route path="/login" element={<Login setuseremail={setuseremail}/>}></Route>
+                <Route path="/register" element={<Register/>}></Route>
+                <Route path="/addcar" element={<Addcar/>}></Route>
+                <Route path="/view/:id" element={<Viewcar/>}></Route>
+                <Route path="/selected/:id" element={<Confirmationform useremail={useremail}/>}></Route>
+                <Route path="/mybooking" element={<Myorder setbill={setbill} useremail={useremail}/>}></Route>
+                <Route path="/payment/:id" element={<Payment bill={bill}/>}></Route>
+                <Route path="/editbooking/:id" element={<Edit/>}></Route>
+                <Route path="/orderpayment/:id" element={<Orderpayment/>}></Route>
+                <Route path="/bookingconfirmedlist" element={<Bookingconfirmed useremail={useremail}/>}></Route>
+  </Routes>
+              </div>
+            </div>
+          </div>
+        </div>
+      </BrowserRouter >
     </div>
+
   );
 }
 
