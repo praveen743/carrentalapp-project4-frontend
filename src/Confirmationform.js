@@ -15,7 +15,7 @@ function Confirmationform({useremail}) {
     
       let fetchcar = async () => {
         try {
-          let itemdetials = await axios.get(`https://carrental-project4-backend.herokuapp.com/car/${params.id}`,{
+          let itemdetials = await axios.get(`http://localhost:3003/car/${params.id}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
@@ -48,7 +48,7 @@ function Confirmationform({useremail}) {
     onSubmit: async (values) => {
       try {
         console.log(values);
-        let data = await axios.post("https://carrental-project4-backend.herokuapp.com/order", values)
+        let data = await axios.post("http://localhost:3003/order", values)
         navigate('/mybooking')
 
         } catch (error) {

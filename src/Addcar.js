@@ -19,7 +19,7 @@ function Addcar() {
     onSubmit: async (values) => {
       try {
         console.log(values);
-        let data = await axios.post("https://carrental-project4-backend.herokuapp.com/addcar", values)
+        let data = await axios.post("http://localhost:3003/addcar", values)
         navigate('/')
 
         } catch (error) {

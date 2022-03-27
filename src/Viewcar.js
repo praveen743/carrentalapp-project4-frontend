@@ -15,7 +15,7 @@ function Viewcar() {
     
       let fetchcar = async () => {
         try {
-          let itemdetials = await axios.get(`https://carrental-project4-backend.herokuapp.com/view/${params.id}`,{
+          let itemdetials = await axios.get(`http://localhost:3003/view/${params.id}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
