@@ -37,31 +37,35 @@ function Register() {
             <form onSubmit={formik.handleSubmit}>
                 <div className='container' id='regform'>
                     <div className='row mt-5'>
-                        <div className='col-lg-4 text-right  text-light align-self-center'><label><b>Username:</b></label></div>
+                        <div className='col-lg-4 text-right  text-light align-self-center'>
+                            <label id='lbls'><b>Username:</b></label></div>
                         <div className='col-lg-4'><input type="text" className='form-control'
                             onChange={formik.handleChange} value={formik.values.Username} name='Username'></input></div>
                     </div>
  
                     <div className='row mt-5'>
-                        <div className='col-lg-4 text-right text-light align-self-center'><label><b>Email:</b></label></div>
+                        <div className='col-lg-4 text-right text-light align-self-center'>
+                            <label id='lbls'><b>Email:</b></label></div>
                         <div className='col-lg-4'><input type="email" className='form-control'
                             onChange={formik.handleChange} value={formik.values.email} name='email'></input></div>
                     </div>
                     <div className='row mt-5'>
-                        <div className='col-lg-4 text-right text-light align-self-center'><label><b>Phonenumber:</b></label></div>
+                        <div className='col-lg-4 text-right text-light align-self-center'>
+                            <label id='lbls'><b>Phonenumber:</b></label></div>
                         <div className='col-lg-4'><input type="text" className='form-control'
                             onChange={formik.handleChange} value={formik.values.phonenumber} name='phonenumber'></input></div>
                     </div>
                     <div className='row mt-5'>
-                        <div className='col-lg-4 text-right text-light align-self-center'><label><b>Password:</b></label></div>
+                        <div className='col-lg-4 text-right text-light align-self-center'>
+                            <label id='lbls'><b>Password:</b></label></div>
                         <div className='col-lg-4'><input type="password" className='form-control'
                             onChange={formik.handleChange} value={formik.values.password} name='password'></input></div>
                     </div>
                     <div className='row mt-3'>
                          <div className='col-lg-6 mt-2 text-light text-right'><input type="submit" 
-                         className='btn btn-lg' id='addbtn' value="Register"></input></div>
+                         className='btn btn-lg' id='logbtn' value="Register"></input></div>
                     <Link to="/login"  className='col-lg-6 mt-2 text-left'><input type="submit" 
-                    className='btn btn-lg' id='addbtn' value="Login"></input></Link>
+                    className='btn btn-lg' id='logbtn' value="Login"></input></Link>
                     </div>
                    
                 </div>

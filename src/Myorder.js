@@ -59,30 +59,28 @@ function Myorder({setbill,useremail}) {
 
   return (
     <>
-            
-            <div className='container' id='ordercardcontainer'>
+    
+     
+           
+            <div className='container' id='paymentcontain'>
                 {
-                    list.map((obj, index) => {
-                        
-                        return <div key={index}>
+                   list.map((obj, index) => {
+                          return <div key={index}>
                            
-                            <div class="card mt-4 ml-4" id='ordercard' style={{ width: "252px" }}>
-                             <div class="card-body" id='odrcardbd'>
-                                <p class="card-text mt-1 text-dark" id='ordtxt'>{` ${obj.brandname} - ${obj.carmodel}`}</p>
-                                    <p class="card-text text-dark" id='ordtxt'>{`Rent for ${obj.days} days and  ${obj.kilometers}kms `}</p>
-                                     <p class="card-text text-dark" id='ordtxt'>{`Bill - RS.${(obj.rent*obj.days)+(obj.costperkm*obj.kilometers)}`} </p>
-                                 <div className='row' id='ordrow'>
-                                   <div className='col-lg-6' >
-                                   <Link to={`/editbooking/${obj._id}`}><button  className='btn btn-sm text-light '  ><b>Edit Order</b></button></Link>
-                                   </div>
-                                   <div className='col-lg-6'>
-                                   <button onClick={() => handleDelete(obj._id)} className='btn btn-sm text-light'  ><b>cancel</b></button>
-                                   </div>
-                                 
+                            <div class="card" id='paymntcard'>
+                             <div class="card-body" id='paycrdbdy' >
+                                <p class="card-text" id='payptag'>{` ${obj.brandname} - ${obj.carmodel}`}</p>
+                                    <p class="card-text  " id='payptag' >{`Rent for ${obj.days} days and  ${obj.kilometers}kms `}</p>
+                                     <p class="card-text  " id='payptag' >{`Bill - RS.${(obj.rent*obj.days)+(obj.costperkm*obj.kilometers)}`} </p>
+                                    
+                               <Link to={`/editbooking/${obj._id}`}><button  
+                                className='btn shadow-none' id='paycrdbtns' >Edit</button></Link>
+                               <button onClick={() => handleDelete(obj._id)}   
+                               className='btn shadow-none' id='paycrdbtns' >Cancel</button><br/>
+                                  
 
-                                 </div>
-                                  <Link to={`/payment/${obj._id}`}> 
-                                  <button className='btn mt-2'
+                                   <Link to={`/payment/${obj._id}`}> 
+                                  <button className='btn mt-3 btn-lg shadow-none'
                                      id='odrbtn'    onClick={() => calculate(obj._id)}
                                     >Pay Now</button></Link> 
                                     

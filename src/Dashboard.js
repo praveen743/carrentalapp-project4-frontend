@@ -6,12 +6,12 @@ function Dashboard() {
   return (
       <>
  <div className='container' id='mainpage' >
-      <button className='cards'><Link to='/view/Hatchback' 
-      style={{textDecoration: 'none',color:'black'}}>HATCHBACK</Link> </button>
-      <button className='cards'><Link to='/view/Sedan' 
-      style={{textDecoration: 'none',color:'black'}}>SEDAN</Link> </button>
-      <button className='cards'><Link to='/view/Suv' 
-      style={{textDecoration: 'none',color:'black'}}>SUV</Link> </button>
+       <div id='dashcards'><Link to='/view/Hatchback' 
+       style={{ textDecoration: 'none',color:'white'}}>Hatchback</Link> </div>
+       <div id='dashcards'><Link to='/view/Sedan'  
+       style={{ textDecoration: 'none',color:'white'}}>Sedan</Link></div>
+       <div id='dashcards'><Link to='/view/Suv' 
+       style={{ textDecoration: 'none',color:'white'}}>SUV</Link></div>
 </div>
     </>
   )

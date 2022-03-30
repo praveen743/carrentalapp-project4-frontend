@@ -1,0 +1,242 @@
+#Tp{
+background-color:crimson;
+height: 70px;
+width: 100%;
+}
+
+#dashcards{
+    width: calc(33% - 20px);
+    height: 300px;
+    margin-left: 20px;
+    color: white;
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color:white;
+    padding-top: 120px;
+    font-size: 40px;
+    
+}
+
+#logbtn{
+    background-color:crimson ;
+    color: white;
+    font-weight: bold;
+    
+}
+
+Link{
+    text-decoration: none;
+}
+
+ 
+
+#dashcards:hover{
+    background: crimson;
+}
+
+
+#tbbtn{
+color: white;
+float: right;
+margin-top: 15px;
+margin-right: 35px;
+font-weight: bold;
+border: none;
+border:crimson ;
+}
+
+#tbbtn.change{
+    border: none;
+
+}
+
+/* cards */
+
+#viewcardbody{
+    background-color: #222;
+ 
+}
+
+#paymentcontain{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+#viewcard{
+    width: 300px;
+    height: 450px;
+    margin: 50px 30px;
+    background-color:  black;
+    border: none;
+    border-radius: 6px;
+}
+
+#viewcard:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0px 0px 50px rgba(182, 176, 176, 0.5);
+  }
+
+#paycrdbdy{
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+#paycrdbdy:hover{
+background-color: crimson;
+transition: all 0.3s ease;
+transform: translateY(-0.5%);
+    box-shadow: 0px 0px 30px rgba(182, 176, 176, 0.5);
+
+}
+
+#payptag{
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+#payrow{
+    background-color: transparent;
+}
+
+#paycrdbtns{
+    background-color: black;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    margin: 5px 5px;
+}
+
+#paycrdbtn{
+    margin-right: 5px;
+    background-color: aliceblue;
+}
+
+#paymntcard{
+margin: 50px 20px;
+width: 320px;
+height: 360px;
+background-color: #222;
+border: none;
+}
+
+
+
+#cardtext{
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+#cardbtn{
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+}
+
+/* payment */
+
+#paymentbox{
+    margin-top: 100px;
+    color: white;
+}
+
+#paymentinput{
+    width: 300px;
+    height: 50px;
+    font-weight: bolder;
+    color: white;
+    font-size: x-large;
+}
+
+#billbtn{
+    background-color: crimson;
+    color: white;
+    width: 150px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#btnx{
+    width: 40px;
+    background-color: white;
+    color: black;
+    height: 40px;
+    margin-bottom: 20px;
+    float: right;
+    border-radius: 50%;
+    padding-top: 9px;
+
+}
+
+/* label */
+#lbls{
+    font-weight: bold;
+    font-size: large;
+    padding-top: 5px;
+}
+
+/* carlogo */
+#carlog{
+    font-size: 40px;
+    float: left;
+    background-color: crimson;
+    color: white;
+    margin-left: 8px;
+    padding-top: 13px;
+}
+
+#tplgtxt{
+    font-size: large;
+    background-color: transparent;
+margin-left: 3px;
+
+margin-bottom: 25px;}
+
+#usrid{
+    background-color: crimson;
+    width: 200px;
+    height: 30px;
+    float: right;
+    border-radius: 0%;
+    border-bottom-left-radius:6px ;
+    margin-top: 2px;
+}
+
+#alrt{
+    color:rgb(46, 45, 45);
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    margin: auto;
+ }
+
+#alrts{
+    color: black;
+}
+
+#blink_me {
+    animation: blinker 3s linear infinite;
+    color: white;
+float: right;
+margin-top: 15px;
+margin-right: 35px;
+font-weight: bold;
+border: none;
+border:crimson ;
+
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

@@ -39,24 +39,30 @@ function Bookingconfirmed({useremail}) {
 
   return (
      <>
+     
     <div className='container' id='ordercardcontainer'>
+   
     {
-        list.map((obj, index) => {
+         list.map((obj, index) => {
             
             return <div key={index}>
                
-                <div class="card mt-4 ml-4" id='ordercard' style={{ width: "252px" }}>
-                 <div class="card-body" id='odrcardbd'>
-                     <button className='btn'  onClick={() => handleDelete(obj._id)} 
-                     id='xbtn'> <b id='xtxt'>X</b></button>
-                    <p class="card-text mt-1 text-dark" id='ordtxt'>{` ${obj.brandname} - ${obj.carmodel}`}</p>
-                        <p class="card-text text-dark" id='ordtxt'>{`Rent for ${obj.days} days and  ${obj.kilometers}kms `}</p>
-                         <p class="card-text text-dark" id='ordtxt'>{`Bill - RS.${(obj.rent*obj.days)+(obj.costperkm*obj.kilometers)}`} </p>
+                <div class="card" id='paymntcard'>
+                 <div class="card-body" id='paycrdbdy'>
+                     <button className='btn' id='btnx'  onClick={() => handleDelete(obj._id)} 
+                     > <b id='xtxt'>X</b></button>
+                    <p class="card-text mt-5" id='payptag'>{` ${obj.brandname} - ${obj.carmodel}`}</p>
+                        <p class="card-text" id='payptag'>{`Rent for ${obj.days} days 
+                         `}</p>
+                        <p class="card-text" id='payptag'>{ `
+                        and  ${obj.kilometers} kms `}</p>
+                         <p class="card-text" id='payptag'>{`Bill - ₹ ${(obj.rent*obj.days)+(obj.costperkm*obj.kilometers)}`} </p>
                      </div>
                      </div>
             </div>
         })
-    }
+    
+      }
     </div>
  </>
   )

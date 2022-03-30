@@ -25,10 +25,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div id="wrapper">
-          <Sidebar useremail={useremail}/> 
+          {/* <Sidebar useremail={useremail}/>  */}
           <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-              <Topbar/>
+              <Topbar useremail={useremail}/>
               <div class="container-fluid">
                 <Routes>
                 <Route path="/" element={<Dashboard/>}></Route>

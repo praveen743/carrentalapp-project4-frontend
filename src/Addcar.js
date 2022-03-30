@@ -52,7 +52,7 @@ function Addcar() {
           <div className='col-lg-4 text-right align-self-center text-light text-lg'>
             <label><b> Car Type:</b></label></div>
           <div className='col-lg-4'><input type="text" className='form-control' 
-          placeholder='hatchback/sedan/SUV' 
+          placeholder='Hatchback/Sedan/Suv' 
             onChange={formik.handleChange} value={formik.values.cartype} name='cartype'></input></div>
         </div>
 
@@ -79,8 +79,8 @@ function Addcar() {
         
         <div className='row mt-2'>
         
-        <div className='col-lg-12 mt-3 text-center'><input type="submit"  id='addbtn'
-         className='btn  ' value="Add Car"></input></div>
+        <div className='col-lg-12 mt-3 text-center'><input type="submit"  id='logbtn'
+         className='btn btn-lg ' value="Add Car"></input></div>
       </div>
       </div>
     </form>

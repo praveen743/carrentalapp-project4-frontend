@@ -36,17 +36,17 @@ function Viewcar() {
                 {
                     list.map((obj, index) => {
                         return <div key={index}>
-                            <div class="card mt-4 ml-4" id='card' style={{ width: "252px" }}>
+                            <div class="card" id='viewcard'>
                             <img class="card-img-top" id='image' src={obj.url} alt="Card image cap" />
                                
-                                <div class="card-body" id='cdbd'>
+                                <div class="card-body" id='viewcardbody'>
 
-                                <p class="card-text mt-1" id='para'>{` ${obj.brandname}`}</p>
-                                    <p class="card-text" id='para'>{` ${obj.carmodel}`}</p>
-                                    <p class="card-text" id='para'>{`Rent Per Day - ₹${obj.rent}`}</p>
-                                    <p class="card-text" id='para'>{`Rent Per kilometer - ₹${obj.costperkm}`}</p>
-                                  <Link to={`/selected/${obj._id}`}> <button className='btn'
-                                     id='selectbtn'    
+                                <p class="card-text mt-1" id='cardtext'>{` ${obj.brandname}`}</p>
+                                    <p class="card-text" id='cardtext'>{` ${obj.carmodel}`}</p>
+                                    <p class="card-text" id='cardtext'>{`Rent Per Day - ₹${obj.rent}`}</p>
+                                    <p class="card-text" id='cardtext'>{`Rent Per kilometer - ₹${obj.costperkm}`}</p>
+                                  <Link to={`/selected/${obj._id}`}> <button className='btn shadow-none'
+                                     id='cardbtn'    
                                     >Select</button></Link> 
                                 </div>
                             </div>

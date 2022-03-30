@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import React,{useState} from 'react';
 import './style.css';
+import './my.css';
  
 
 function Payment({bill}) {
@@ -38,7 +39,7 @@ console.log(bill);
           address:"Razorpay Corporate office"
         },
         theme: {
-          color:"#00FFFF"
+          color:"#DC143C"
         }
       };
       var pay = new window.Razorpay(options);
@@ -48,12 +49,13 @@ console.log(bill);
     }
   }
   return (
-    <div className="App">
+    <div className="App" id='paymentbox'>
      <h2>Razorpay Payment</h2>
      <br/>
-     <input className='text-center text-light' type="text" placeholder='Enter Amount' value={amount}onChange={(e)=>setamount(e.target.value)} />
+     <input className='text-center text-light' id='paymentinput'
+      type="text" placeholder='Enter Amount' value={amount}onChange={(e)=>setamount(e.target.value)} />
      <br/><br/>
-     <button className='btn' id='payform' onClick={handleSubmit}>{`PAY ${bill}`}</button>
+     <button className='btn shadow-none' id='billbtn' onClick={handleSubmit}>{`PAY ${bill}`}</button>
     </div>
   );
 }

@@ -67,7 +67,7 @@ function Confirmationform({useremail}) {
           <div className='col-lg-4 text-right align-self-center text-light text-lg'>
             <label><b> Number Of Days You Need For Rent : </b></label></div>
 
-          <div className='col-lg-4'><input type="number" className='form-control'
+          <div className='col-lg-4'><input type="number" className='form-control' min={1}
            
              onChange={formik.handleChange} value={formik.values.days} name='days'></input></div>
         </div>
@@ -75,7 +75,7 @@ function Confirmationform({useremail}) {
         <div className='row mt-4'>
           <div className='col-lg-4 text-right align-self-center text-light text-lg'>
             <label><b> Number Of Kilometers:</b></label></div>
-             <div className='col-lg-4'><input type="number" className='form-control' 
+             <div className='col-lg-4'><input type="number" className='form-control' min={1}
             onChange={formik.handleChange} value={ formik.values.kilometers} name='kilometers'></input></div>
         </div>
       
@@ -83,8 +83,8 @@ function Confirmationform({useremail}) {
      
         <div className='row mt-2'>
         
-        <div className='col-lg-12 mt-3 text-center'><input type="submit"  id='addbtn'
-         className='btn' value="Submit"></input></div>
+        <div className='col-lg-12 mt-3 text-center'><input type="submit"  id='cardbtn'
+         className='btn shadow-none' value="Submit"></input></div>
       </div>
       </div>
     </form>
