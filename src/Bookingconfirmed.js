@@ -14,7 +14,7 @@ function Bookingconfirmed({useremail}) {
       let fetchcar = async () => {
         try {
           console.log(useremail)
-          let itemdetials = await axios.get(`http://localhost:3003/confirmedbooking/${useremail}`,{
+          let itemdetials = await axios.get(`https://carrental-project4-backend.herokuapp.com/confirmedbooking/${useremail}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
@@ -30,7 +30,7 @@ function Bookingconfirmed({useremail}) {
         try {
             let result = window.confirm("Are you sure do you want to cancel?")
             if (result) {
-                await axios.delete(`http://localhost:3003/delete/${id}` )
+                await axios.delete(`https://carrental-project4-backend.herokuapp.com/delete/${id}` )
                 fetchcar()
             }
         } catch (error) {
