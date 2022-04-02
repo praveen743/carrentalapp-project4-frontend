@@ -16,7 +16,7 @@ function Edit() {
     
       let fetchcar = async () => {
         try {
-          let itemdetials = await axios.get(`http://localhost:3003/editorder/${params.id}`,{
+          let itemdetials = await axios.get(`https://carrental-project4-backend.herokuapp.com/editorder/${params.id}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
@@ -50,7 +50,7 @@ function Edit() {
     onSubmit: async (values) => {
       try {
         console.log(values);
-        let data = await axios.put(`http://localhost:3003/order/${params.id}`, values)
+        let data = await axios.put(`https://carrental-project4-backend.herokuapp.com/order/${params.id}`, values)
         navigate('/mybooking')
 
         } catch (error) {
