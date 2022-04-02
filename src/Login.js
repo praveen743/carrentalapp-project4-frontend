@@ -18,18 +18,24 @@ function Login({setuseremail}) {
             try {
                 console.log(values);
                 let data = await axios.post("http://localhost:3003/login", values)
-                 window.localStorage.setItem("my_token", data.data.token)
-                console.log(data.data);
-                if (data.data.message == "login") {
+                 window.localStorage.setItem("my_token", data.data.token);
+                 window.localStorage.setItem("useremail", data.data.user.email);
+                // alert(data.data.message);
+                
+                if (data.data.message === "login") {
                     console.log(data.data.user.email);
-                     setuseremail(data.data.user.email);
+                    console.log(window.localStorage.getItem("useremail"));
+                    setuseremail(window.localStorage.getItem("useremail"));
                      navigate("/");
                 }else{
+                    console.log("UserID or Password Incorrect :( ")
                     alert("UserID or Password Incorrect :( ")
                 }
 
             } catch (error) {
-                console.log(error)
+                alert("UserID or Password Incorrect :(")
+                alert("Register to login")
+                // navigate('/register')
             }
         }
     })

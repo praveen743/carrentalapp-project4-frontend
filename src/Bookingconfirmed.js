@@ -13,6 +13,7 @@ function Bookingconfirmed({useremail}) {
     
       let fetchcar = async () => {
         try {
+          console.log(useremail)
           let itemdetials = await axios.get(`http://localhost:3003/confirmedbooking/${useremail}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")

@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './Sb.css';
+// import './Sb.css'; 
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import { useState } from 'react';
@@ -28,14 +28,14 @@ function App() {
           {/* <Sidebar useremail={useremail}/>  */}
           <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-              <Topbar useremail={useremail}/>
+              <Topbar setuseremail={setuseremail} useremail={useremail}/>
               <div class="container-fluid">
                 <Routes>
                 <Route path="/" element={<Dashboard/>}></Route>
                 <Route path="/login" element={<Login setuseremail={setuseremail}/>}></Route>
                 <Route path="/register" element={<Register/>}></Route>
                 <Route path="/addcar" element={<Addcar/>}></Route>
-                <Route path="/view/:id" element={<Viewcar/>}></Route>
+                <Route path="/view/:id" element={<Viewcar useremail={useremail}/>}></Route>
                 <Route path="/selected/:id" element={<Confirmationform useremail={useremail}/>}></Route>
                 <Route path="/mybooking" element={<Myorder setbill={setbill} useremail={useremail}/>}></Route>
                 <Route path="/payment/:id" element={<Payment bill={bill}/>}></Route>
