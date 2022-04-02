@@ -20,7 +20,11 @@ function Viewcar({useremail}) {
             alert("Sign In to see cars");
             navigate('/login');
           }else{
-            let itemdetials = await axios.get(`https://carrental-project4-backend.herokuapp.com/view/${params.id}`);
+            let itemdetials = await axios.get(`https://carrental-project4-backend.herokuapp.com/view/${params.id}`,{
+            headers: {
+                Authorization: window.localStorage.getItem("my_token")
+            }
+        });
         
             console.log(itemdetials.data);
             setlist(itemdetials.data)
