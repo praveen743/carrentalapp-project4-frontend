@@ -15,7 +15,7 @@ function Orderpayment() {
 
       let confirmorder = async () => {
         try {
-          let itemdetials = await axios.put(`http://localhost:3003/payorder/${params.id}`,{
+          let itemdetials = await axios.put(`https://carrental-project4-backend.herokuapp.com/payorder/${params.id}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
