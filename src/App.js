@@ -31,9 +31,9 @@ function App() {
               <Topbar setuseremail={setuseremail} useremail={useremail}/>
               <div class="container-fluid">
                 <Routes>
-                <Route path="/" element={<Dashboard/>}></Route>
+                <Route path="/dasdboard" element={<Dashboard/>}></Route>
                 <Route path="/login" element={<Login setuseremail={setuseremail}/>}></Route>
-                <Route path="/register" element={<Register/>}></Route>
+                <Route path="/" element={<Register/>}></Route>
                 <Route path="/addcar" element={<Addcar/>}></Route>
                 <Route path="/view/:id" element={<Viewcar useremail={useremail}/>}></Route>
                 <Route path="/selected/:id" element={<Confirmationform useremail={useremail}/>}></Route>
