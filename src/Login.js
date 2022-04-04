@@ -26,7 +26,7 @@ function Login({setuseremail}) {
                     console.log(data.data.user.email);
                     console.log(window.localStorage.getItem("useremail"));
                     setuseremail(window.localStorage.getItem("useremail"));
-                     navigate("/");
+                     navigate("/dashboard");
                 }else{
                     console.log("UserID or Password Incorrect :( ")
                     alert("UserID or Password Incorrect :( ")
