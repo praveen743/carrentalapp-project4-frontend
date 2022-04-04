@@ -37,7 +37,7 @@ export default function Topbar({setuseremail,useremail}){
              <button className="btn shadow-none" id='tbbtn'  
              onClick={() => handleLogout()}>Logout</button>  
              <Link to='/addcar'>  <button className="btn shadow-none" id='tbbtn'>Add Car</button></Link> 
-             <Link to='/register'>  <button className="btn shadow-none" id='tbbtn'>Sign Up</button></Link> 
+             <Link to='/'>  <button className="btn shadow-none" id='tbbtn'>Sign Up</button></Link> 
        
        { useremail!==null?<Link to='/login'>  <button className="btn shadow-none" 
          id='tbbtn'>Sign In</button></Link>:<Link to='/login'>  <button className="btn shadow-none" 
